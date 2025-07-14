@@ -2,289 +2,488 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Business Consulting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Business Consulting</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <style>
-    body {
-      font-family: 'Manrope', sans-serif;
-      background-color: #81848A;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            /* background-color: #81848A; */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-    header {
-      padding: 25px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+        header {
+            padding: 25px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-    .nav-link.active,
-    .nav-link[aria-current="page"] {
-      color: #9cff01 !important;
-    }
+        .nav-link.active,
+        .nav-link[aria-current="page"] {
+            color: #9cff01 !important;
+        }
 
-    .nav-link.active:hover,
-    .nav-link[aria-current="page"]:hover {
-      color: darkgreen !important;
-    }
+        .nav-link.active:hover,
+        .nav-link[aria-current="page"]:hover {
+            color: darkgreen !important;
+        }
 
-    .navbar-toggler {
-      border: 2px solid #9cff01 !important;
-      border-radius: 4px;
-    }
+        .navbar-toggler {
+            border: 2px solid #9cff01 !important;
+            border-radius: 4px;
+        }
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239cff01' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239cff01' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
 
-    .nav-link:hover {
-      color: #9cff01;
-    }
+        .nav-link:hover {
+            color: #9cff01;
+        }
 
-    .header {
-      background-image: url('carousel2.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-    }
+        .header {
+            background-image: url('carousel2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
 
-      .header a {
+        .header a {
             color: #ffffff;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
         }
 
-   .carousel-item {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative; /* Needed for absolute children */
-}
+        .carousel-item {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            /* Needed for absolute children */
+        }
 
-.carousel-services {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: 0 2rem;
-}
+        .carousel-services {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 0 2rem;
+        }
 
-    .carousel-caption {
-      position: static;
-      padding: 0 1rem;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
+        .carousel-caption {
+            position: static;
+            padding: 0 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
 
-    .carousel-caption h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
+        .carousel-caption h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
 
-    .carousel-caption p {
-      max-width: 700px;
-      margin: 0 auto;
-    }
+        .carousel-caption p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-    .about {
-      background-color: rgba(244, 240, 240, 0.5);
-      background-image: url('about.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: left;
-      height: 100vh;
-      overflow: hidden;
-    }
+        .about {
+            background-color: rgba(244, 240, 240, 0.5);
+            background-image: url('about.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-    .img-stack {
-      position: relative;
-      width: 100%;
-      height: 400px;
-    }
+        .img-stack {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
 
-    .abt-img-1,
-    .abt-img-2 {
-      position: absolute;
-      width: 200px;
-      border-radius: 20px;
-      border: 5px solid #ffffff;
-    }
+        .abt-img-1,
+        .abt-img-2 {
+            position: absolute;
+            width: 200px;
+            border-radius: 20px;
+            border: 5px solid #ffffff;
+        }
 
-    .abt-img-1 {
-      top: 50%;
-      left: 50%;
-      transform: translate(-80%, -80%);
-      z-index: 2;
-    }
+        .abt-img-1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-80%, -80%);
+            z-index: 2;
+        }
 
-    .abt-img-2 {
-      top: 50%;
-      left: 50%;
-      transform: translate(-10%, -10%);
-      z-index: 1;
-    }
+        .abt-img-2 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-10%, -10%);
+            z-index: 1;
+        }
 
-    .about2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 2rem;
-    }
+        .about2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 2rem;
+        }
 
-    /* Responsive Fixes */
-    @media (max-width: 992px) {
-      .about {
-        height: auto;
-        padding: 2rem 0;
-      }
+        .services {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url('carouselbg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+            z-index: 1;
+            /* ✅ Allows it to grow beyond 50vh if needed */
+            padding: 3rem 0.5rem;
+            /* ✅ Prevents content from sticking to the edges */
+            color: #EBEBEB;
+        }
 
-      .about2 {
-        height: auto;
-        padding: 2rem 1rem;
-      }
 
-      .img-stack {
-        height: auto;
-        padding: 2rem 0;
-      }
+        /* coming back  */
+        .services-row {
+            background-image: url('your-bg-image.jpg');
+            /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: #ffffff;
+            /* white overlay feel */
+            backdrop-filter: brightness(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-60%);
+            width: 100%;
+        }
 
-      .abt-img-1,
-      .abt-img-2 {
-        position: static;
-        display: block;
-        margin: 1rem auto;
-        transform: none;
-      }
+        .border-gray {
+            border-right: 1px solid #ccc;
+        }
 
-      .carousel-caption h1 {
-        font-size: 1.8rem;
-      }
+        .portrait-gallery {
+            display: flex;
+            justify-content: center;
+            /* Center them horizontally */
+            gap: 1rem;
+            /* Space between images */
+            flex-wrap: wrap;
+            /* Allows wrapping on small screens */
+            padding: 1rem;
+        }
 
-      .carousel-caption p {
-        font-size: 1rem;
-      }
-    .carousel-services {
-    position: static;
-    padding: 1.5rem 1rem;
-    margin-top: 1.5rem;
-  }
+        .portrait-gallery img {
+            width: 180px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
 
-  .carousel-item {
-    padding-bottom: 4rem; /* add extra space for content */
-  }
-    }
-  </style>
+        /* coming back end  */
+
+
+        /* Responsive Fixes */
+        @media (max-width: 992px) {
+            .about {
+                height: auto;
+                padding: 2rem 0;
+            }
+
+            .about2 {
+                height: auto;
+                padding: 2rem 1rem;
+            }
+
+            .img-stack {
+                height: auto;
+                padding: 2rem 0;
+            }
+
+            .abt-img-1,
+            .abt-img-2 {
+                position: static;
+                display: block;
+                margin: 1rem auto;
+                transform: none;
+            }
+
+            .carousel-caption h1 {
+                font-size: 1.8rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
+            }
+
+            .carousel-services {
+                position: static;
+                padding: 1.5rem 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .carousel-item {
+                padding-bottom: 4rem;
+                /* add extra space for content */
+            }
+
+
+            .services-row {
+                background-size: cover;
+                background-position: center;
+
+                background-color: #ffffff;
+                /* white overlay feel */
+                backdrop-filter: brightness(1.1);
+                box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-20%);
+                /* width: 100%; */
+            }
+
+            .border-gray {
+                border: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Header -->
-  <div class="header">
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="kitablogo.png" alt="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Goals</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Media & Advertising</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Land Merchandise</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <!-- Header -->
+    <div class="header">
+        <header>
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="kitablogo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Media & Advertising</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Land Merchandise</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Carousel -->
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Quality Service Delivery <br> and Customer Satisfaction</h1>
-              <p class="mt-3">
-                We handle the huddles of business in navigating the landscape of Lagos — from promotions and advertising
-                to business properties and government statutory requirements.
-              </p>
-              <img src="Link.svg" alt="" class="mt-3">
+        <!-- Carousel -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Quality Service Delivery <br> and Customer Satisfaction</h1>
+                            <p class="mt-3">
+                                We handle the huddles of business in navigating the landscape of Lagos — from promotions
+                                and advertising
+                                to business properties and government statutory requirements.
+                            </p>
+                            <img src="Link.svg" alt="" class="mt-3">
+                        </div>
+                        <div class="row text-white text-center g-3 mb-4 carousel-services">
+                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Business Advertising</div>
+                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Consulting</div>
+                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Brand Marketing</div>
+                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row text-white text-center g-3 mb-4 carousel-services">
-              <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Business Advertising</div>
-              <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Consulting</div>
-              <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Brand Marketing</div>
-              <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container-fluid">
+        <div class="row about">
+            <!-- Left Image Stack -->
+            <div class="col-md-6 d-none d-md-block">
+                <div class="img-stack">
+                    <img src="img1.png" alt="" class="abt-img-1">
+                    <img src="img2.png" alt="" class="abt-img-2">
+                </div>
             </div>
-          </div>
+
+            <!-- Right Content -->
+            <div class="col-md-6 about2">
+                <div class="w-100 px-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="Image.svg" class="me-2" alt="">
+                        <h5 class="mb-0">About Us</h5>
+                    </div>
+                    <h4 class="mt-3">
+                        <span class="fw-light">Quality Service Delivery &</span><br>
+                        <span class="fw-bold">Customer Satisfaction</span>
+                    </h4>
+                    <p class="mt-3">
+                        We are a business consulting firm based in Lagos, Nigeria, helping entrepreneurs navigate
+                        challenges of
+                        starting and growing a business — from promotions to securing properties and meeting government
+                        requirements.
+                    </p>
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <span><img src="SVG.svg" alt="" class="me-2"> Business Setup</span>
+                        <span><img src="SVG.svg" alt="" class="me-2"> Consulting</span>
+                        <span><img src="SVG.svg" alt="" class="me-2"> Tax Registration</span>
+                        <span><img src="SVG.svg" alt="" class="me-2"> Marketing</span>
+                        <span><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    <!-- our Services section  -->
+    <div class="container-fluid services">
+        <div class="row">
 
-  <!-- About Section -->
-  <div class="container-fluid">
-    <div class="row about">
-      <!-- Left Image Stack -->
-      <div class="col-md-6 d-none d-md-block">
-        <div class="img-stack">
-          <img src="img1.png" alt="" class="abt-img-1">
-          <img src="img2.png" alt="" class="abt-img-2">
-        </div>
-      </div>
+            <div class="col-md-6 px-4">
+                <div class="w-100 px-3 my-5 mx-5">
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="Image.svg" class="me-2" alt="">
+                            <h5 class="mb-0">Services</h5>
+                        </div>
+                    </div>
 
-      <!-- Right Content -->
-      <div class="col-md-6 about2">
-        <div class="w-100 px-3">
-          <div class="d-flex align-items-center mb-3">
-            <img src="Image.svg" class="me-2" alt="">
-            <h5 class="mb-0">About Us</h5>
-          </div>
-          <h4 class="mt-3">
-            <span class="fw-light">Quality Service Delivery &</span><br>
-            <span class="fw-bold">Customer Satisfaction</span>
-          </h4>
-          <p class="mt-3">
-            We are a business consulting firm based in Lagos, Nigeria, helping entrepreneurs navigate challenges of
-            starting and growing a business — from promotions to securing properties and meeting government
-            requirements.
-          </p>
-          <div class="d-flex flex-column gap-2 mt-3">
-            <span><img src="SVG.svg" alt="" class="me-2"> Business Setup</span>
-            <span><img src="SVG.svg" alt="" class="me-2"> Consulting</span>
-            <span><img src="SVG.svg" alt="" class="me-2"> Tax Registration</span>
-            <span><img src="SVG.svg" alt="" class="me-2"> Marketing</span>
-            <span><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</span>
-          </div>
+                    <h4 class="">
+                        <span class="fw-light">Quality Service Delivery &</span><br>
+                        <span class="fw-bold">Customer Satisfaction</span>
+                    </h4>
+                </div>
+            </div>
+
+
+            <!-- Right Content -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center px-4">
+                <div class="w-100 px-3 my-5">
+
+                    <p class="mt-3 font-weight-light" style="font-size: 14px;">
+                        At K.I-T.A.B, we offer strategic problem-solving
+                        services that help organizations overcome obstacles,
+                        unlock growth, and drive innovation. Whether you're
+                        facing issues of branding you business, Advetising
+                        your product and services to the rigth market, Tax
+                        Issues, legitimate Land to use for your business, or
+                        complex strategic decisions, we bring clarity, structure,
+                        and solutions.
+                    </p>
+
+                </div>
+            </div>
         </div>
-      </div>
+
+
     </div>
-  </div>
+    <div class="container-fluid services2">
+        <div class="container mt-5">
+            <div class="row services-row text-center p-4">
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+                <div class="col-md-3 my-3 px-2 border-end border-gray">
+                    <img src="Web-Advertising.svg" alt="" class="mb-3">
+                    <h6 class="text-dark">Advertisements</h6>
+                    <img src="Link2.svg" alt="">
+                </div>
+
+                <div class="col-md-3 my-3 px-2 border-end border-gray">
+                    <img src="Country.svg" alt="" class="mb-3">
+                    <h6 class="text-dark">Land Development Program</h6>
+                    <img src="Link2.svg" alt="">
+                </div>
+
+                <div class="col-md-3 my-3 px-2 border-end border-gray">
+                    <img src="Meeting-Room.svg" alt="" class="mb-3">
+                    <h6 class="text-dark">Consulting</h6>
+                    <img src="Link2.svg" alt="">
+                </div>
+
+                <div class="col-md-3 my-3 px-2">
+                    <img src="Commercial.svg" alt="" class="mb-3">
+                    <h6 class="text-dark">Brand Marketing</h6>
+                    <img src="Link2.svg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- still cheking  -->
+    <div class="container-fluid">
+        <div class="row about">
+            <!-- Left Image Stack -->
+            <div class="col-md-6 d-md-block">
+                <div class="w-100 px-3 mx-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="Image.svg" class="me-2" alt="">
+                        <h5 class="mb-0">Media & Advertisement</h5>
+                    </div>
+                    <h4 class="mt-3">
+                        <span class="fw-light">Strategic Placement. Maximum Awareness.</span>
+                    </h4>
+                    <img src="billboard.png" alt="" class="mt-3">
+                    <p class="mt-4 justify-text">
+                        We help you get permits in
+                        visible and viable places for all
+                        this products above to introduce
+                        your business to the enviroment
+                        for your potential buyers, users
+                        and panters. To promote your
+                        business and give brand
+                        awaerness.
+                    </p>
+                </div>
+
+
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-md-6">
+                <div class="portrait-gallery">
+                    <img src="snap3.png" alt="">
+                    <img src="snap2.png" alt="">
+                    <img src="snap1.png" alt="" style="width: 270px; height: 180px;">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
