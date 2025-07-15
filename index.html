@@ -12,283 +12,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/testimonial.css">
+    <link rel="stylesheet" href="style/loader.css">
 
     <style>
-        body {
-            font-family: 'Manrope', sans-serif;
-            /* background-color: #81848A; */
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
 
-        header {
-            padding: 25px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-link.active,
-        .nav-link[aria-current="page"] {
-            color: #9cff01 !important;
-        }
-
-        .nav-link.active:hover,
-        .nav-link[aria-current="page"]:hover {
-            color: darkgreen !important;
-        }
-
-        .navbar-toggler {
-            border: 2px solid #9cff01 !important;
-            border-radius: 4px;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239cff01' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-
-        .nav-link:hover {
-            color: #9cff01;
-        }
-
-        .header {
-            background-image: url('carousel2.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-        }
-
-        .header a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .carousel-item {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            /* Needed for absolute children */
-        }
-
-        .carousel-services {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            width: 100%;
-            padding: 0 2rem;
-        }
-
-        .carousel-caption {
-            position: static;
-            padding: 0 1rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .carousel-caption h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        .carousel-caption p {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .about {
-            background-color: rgba(244, 240, 240, 0.5);
-            background-image: url('about.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: left;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .img-stack {
-            position: relative;
-            width: 100%;
-            height: 400px;
-        }
-
-        .abt-img-1,
-        .abt-img-2 {
-            position: absolute;
-            width: 200px;
-            border-radius: 20px;
-            border: 5px solid #ffffff;
-        }
-
-        .abt-img-1 {
-            top: 50%;
-            left: 50%;
-            transform: translate(-80%, -80%);
-            z-index: 2;
-        }
-
-        .abt-img-2 {
-            top: 50%;
-            left: 50%;
-            transform: translate(-10%, -10%);
-            z-index: 1;
-        }
-
-        .about2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            padding: 2rem;
-        }
-
-        .services {
-            background-color: rgba(0, 0, 0, 0.5);
-            background-image: url('carouselbg.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            min-height: 50vh;
-            z-index: 1;
-            /* ✅ Allows it to grow beyond 50vh if needed */
-            padding: 3rem 0.5rem;
-            /* ✅ Prevents content from sticking to the edges */
-            color: #EBEBEB;
-        }
-
-
-        /* coming back  */
-        .services-row {
-            background-image: url('your-bg-image.jpg');
-            /* Replace with your image */
-            background-size: cover;
-            background-position: center;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            background-color: #ffffff;
-            /* white overlay feel */
-            backdrop-filter: brightness(1.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transform: translateY(-60%);
-            width: 100%;
-        }
-
-        .border-gray {
-            border-right: 1px solid #ccc;
-        }
-
-        .portrait-gallery {
-            display: flex;
-            justify-content: center;
-            /* Center them horizontally */
-            gap: 1rem;
-            /* Space between images */
-            flex-wrap: wrap;
-            /* Allows wrapping on small screens */
-            padding: 1rem;
-        }
-
-        .portrait-gallery img {
-            width: 180px;
-            height: 270px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        /* coming back end  */
-
-
-        /* Responsive Fixes */
-        @media (max-width: 992px) {
-            .about {
-                height: auto;
-                padding: 2rem 0;
-            }
-
-            .about2 {
-                height: auto;
-                padding: 2rem 1rem;
-            }
-
-            .img-stack {
-                height: auto;
-                padding: 2rem 0;
-            }
-
-            .abt-img-1,
-            .abt-img-2 {
-                position: static;
-                display: block;
-                margin: 1rem auto;
-                transform: none;
-            }
-
-            .carousel-caption h1 {
-                font-size: 1.8rem;
-            }
-
-            .carousel-caption p {
-                font-size: 1rem;
-            }
-
-            .carousel-services {
-                position: static;
-                padding: 1.5rem 1rem;
-                margin-top: 1.5rem;
-            }
-
-            .carousel-item {
-                padding-bottom: 4rem;
-                /* add extra space for content */
-            }
-
-
-            .services-row {
-                background-size: cover;
-                background-position: center;
-
-                background-color: #ffffff;
-                /* white overlay feel */
-                backdrop-filter: brightness(1.1);
-                box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-                transform: translateY(-20%);
-                /* width: 100%; */
-            }
-
-            .border-gray {
-                border: none;
-            }
-        }
     </style>
 </head>
 
 <body>
+    <!-- ads overlay  -->
+     <!-- Popup Overlay -->
+<div id="popup-overlay" class="popup-overlay">
+  <div class="popup-content">
+    <button class="close-popup" aria-label="Close">&times;</button>
+    <img src="images/inspo.jpg" alt="Advertisement" class="img-fluid">
+    <p class="text-center mt-2"></p>
+  </div>
+</div>
+
+    <!-- loader  -->
+    <div id="loader"></div>
     <!-- Header -->
-    <div class="header">
+   <div id="page-content" style="display: none;">
+     <div class="header">
         <header>
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="kitablogo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="#"><img src="images/kitablogo.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Media & Advertising</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Land Merchandise</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#our-service">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#media">Media & Advertising</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#land">Land Merchandise</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -307,13 +72,13 @@
                                 and advertising
                                 to business properties and government statutory requirements.
                             </p>
-                            <img src="Link.svg" alt="" class="mt-3">
+                            <a href="#about-us"><img src="./svg/Link.svg" alt="" class="mt-3"></a>
                         </div>
-                        <div class="row text-white text-center g-3 mb-4 carousel-services">
-                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Business Advertising</div>
-                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Consulting</div>
-                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Brand Marketing</div>
-                            <div class="col-md-3"><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</div>
+                        <div class="row text-white g-3 mb-2 carousel-services">
+                            <div class="col-md-3"><img src="svg/SVG.svg" alt="" class="me-2"> Business Advertising</div>
+                            <div class="col-md-3"><img src="svg/SVG.svg" alt="" class="me-2"> Consulting</div>
+                            <div class="col-md-3"><img src="svg/SVG.svg" alt="" class="me-2"> Brand Marketing</div>
+                            <div class="col-md-3"><img src="svg/SVG.svg" alt="" class="me-2"> Property Acquisition</div>
                         </div>
                     </div>
                 </div>
@@ -322,13 +87,13 @@
     </div>
 
     <!-- About Section -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="about-us">
         <div class="row about">
             <!-- Left Image Stack -->
             <div class="col-md-6 d-none d-md-block">
                 <div class="img-stack">
-                    <img src="img1.png" alt="" class="abt-img-1">
-                    <img src="img2.png" alt="" class="abt-img-2">
+                    <img src="images/img1.png" alt="" class="abt-img-1">
+                    <img src="images/img2.png" alt="" class="abt-img-2">
                 </div>
             </div>
 
@@ -336,7 +101,7 @@
             <div class="col-md-6 about2">
                 <div class="w-100 px-3">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="Image.svg" class="me-2" alt="">
+                        <img src="svg/Image.svg" class="me-3" alt="">
                         <h5 class="mb-0">About Us</h5>
                     </div>
                     <h4 class="mt-3">
@@ -350,25 +115,25 @@
                         requirements.
                     </p>
                     <div class="d-flex flex-column gap-2 mt-3">
-                        <span><img src="SVG.svg" alt="" class="me-2"> Business Setup</span>
-                        <span><img src="SVG.svg" alt="" class="me-2"> Consulting</span>
-                        <span><img src="SVG.svg" alt="" class="me-2"> Tax Registration</span>
-                        <span><img src="SVG.svg" alt="" class="me-2"> Marketing</span>
-                        <span><img src="SVG.svg" alt="" class="me-2"> Property Acquisition</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Business Setup</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Consulting</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Tax Registration</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Marketing</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Property Acquisition</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- our Services section  -->
-    <div class="container-fluid services">
+    <div class="container-fluid services" id="our-service">
         <div class="row">
 
             <div class="col-md-6 px-4">
                 <div class="w-100 px-3 my-5 mx-5">
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
-                            <img src="Image.svg" class="me-2" alt="">
+                            <img src="svg/Image.svg" class="me-2" alt="">
                             <h5 class="mb-0">Services</h5>
                         </div>
                     </div>
@@ -402,88 +167,364 @@
 
 
     </div>
-    <div class="container-fluid services2">
-        <div class="container mt-5">
-            <div class="row services-row text-center p-4">
 
-                <div class="col-md-3 my-3 px-2 border-end border-gray">
-                    <img src="Web-Advertising.svg" alt="" class="mb-3">
-                    <h6 class="text-dark">Advertisements</h6>
-                    <img src="Link2.svg" alt="">
+    <div class="container-fluid">
+        <div class="container mt-4 justify-content-center">
+            <div class="row services-row text-center p-3 w-100 mx-auto">
+
+                <div class="col-md-3 my-3 px-2 border-end border-gray mx-auto">
+                    <img src="svg/Web-Advertising.svg" alt="" class="mb-3">
+                    <h6 class="svg/text-dark">Advertisements</h6>
+                    <img src="svg/Link2.svg" alt="">
                 </div>
 
                 <div class="col-md-3 my-3 px-2 border-end border-gray">
-                    <img src="Country.svg" alt="" class="mb-3">
-                    <h6 class="text-dark">Land Development Program</h6>
-                    <img src="Link2.svg" alt="">
+                    <img src="svg/Country.svg" alt="" class="mb-3">
+                    <h6 class="svg/text-dark">Land Development Program</h6>
+                    <img src="svg/Link2.svg" alt="">
                 </div>
 
                 <div class="col-md-3 my-3 px-2 border-end border-gray">
-                    <img src="Meeting-Room.svg" alt="" class="mb-3">
-                    <h6 class="text-dark">Consulting</h6>
-                    <img src="Link2.svg" alt="">
+                    <img src="svg/Meeting-Room.svg" alt="" class="mb-3">
+                    <h6 class="svg/text-dark">Consulting</h6>
+                    <img src="svg/Link2.svg" alt="">
                 </div>
 
                 <div class="col-md-3 my-3 px-2">
-                    <img src="Commercial.svg" alt="" class="mb-3">
-                    <h6 class="text-dark">Brand Marketing</h6>
-                    <img src="Link2.svg" alt="">
+                    <img src="svg/Commercial.svg" alt="" class="mb-3">
+                    <h6 class="svg/text-dark">Brand Marketing</h6>
+                    <img src="svg/Link2.svg" alt="">
                 </div>
 
             </div>
         </div>
     </div>
 
-
-    <!-- still cheking  -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="media">
         <div class="row about">
-            <!-- Left Image Stack -->
-            <div class="col-md-6 d-md-block">
-                <div class="w-100 px-3 mx-5">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <div class="px-5 py-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="Image.svg" class="me-2" alt="">
+                        <img src="svg/Image.svg" class="me-2" alt="">
                         <h5 class="mb-0">Media & Advertisement</h5>
                     </div>
                     <h4 class="mt-3">
                         <span class="fw-light">Strategic Placement. Maximum Awareness.</span>
                     </h4>
-                    <img src="billboard.png" alt="" class="mt-3">
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Lampoles Adverts </span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Bill Board Adverts </span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Building Branding</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Mobile Advert </span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Led Screens</span>
+                    </div>
                     <p class="mt-4 justify-text">
-                        We help you get permits in
-                        visible and viable places for all
-                        this products above to introduce
-                        your business to the enviroment
-                        for your potential buyers, users
-                        and panters. To promote your
-                        business and give brand
-                        awaerness.
+                        We help you get permits in visible and viable places for all these products above to introduce
+                        your business
+                        to the environment for your potential buyers, users, and partners. To promote your business and
+                        give brand
+                        awareness.
                     </p>
                 </div>
-
-
             </div>
 
-            <!-- Right Content -->
+            <!-- Right Column -->
             <div class="col-md-6">
                 <div class="portrait-gallery">
-                    <img src="snap3.png" alt="">
-                    <img src="snap2.png" alt="">
-                    <img src="snap1.png" alt="" style="width: 270px; height: 180px;">
-                    
-                    
+                    <img src="images/snap3.png" alt="">
+                    <img src="images/snap2.png" alt="">
+                    <img src="images/snap1.png" alt="">
+                    <img src="images/billboard.png" alt="">
                 </div>
             </div>
         </div>
     </div>
 
 
+    <!-- land marchandise section -->
+    <div class="container-fluid" id="land">
+        <div class="row land">
+            <!-- Left Column -->
+            <div class="col-md-6"
+                style="background-image: url(images/planeland.jpg);background-position: center; background-repeat: no-repeat;background-size: cover;">
+
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-6" style="background-color: #9a9494; color: #ffffff;">
+                <div class="px-5 py-5">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="svg/Image.svg" class="me-2" alt="">
+                        <h5 class="mb-0">Land Merchandise</h5>
+                    </div>
+
+                    <p class="mt-4 justify-text">
+                        Introducing a rare opportunity! We present the first sea-view property on
+                        the mainland, strategically located opposite Banana Island and adjacent to the Third
+                        Mainland Bridge. This prime property offers:
+                    </p>
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Breathtaking sea views </span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Commercial and residential development
+                            potential</span>
+                        <span><img src="svg/SVG.svg" alt="" class="me-2"> Boat access for added convenience and
+                            luxury</span>
+                    </div>
+                    <img src="svg/more.svg" alt="" class="my-5">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container" id="team">
+        <div class="row">
+            <div class="col-md-12 py-4 d-flex align-items-center">
+                <img src="svg/Image.svg" class="me-2" alt="">
+                <h5 class="mb-0">Our Teams</h5>
+            </div>
+        </div>
+
+        <div class="teams-wrapper">
+            <div class="row teams-row justify-content-center">
+                <div class="col-md-3 text-center teams-member">
+                    <img src="images/imageholder.jpg" alt="">
+                    <h6 class="mt-2 fw-bold">IBRAHIM OLAJIDE</h6>
+                    <span>MD/CEO</span>
+                </div>
+                <div class="col-md-3 text-center teams-member">
+                    <img src="images/imageholder.jpg" alt="">
+                    <h6 class="mt-2 fw-bold">TPL PETERS OLUGBENGA</h6>
+                    <span>TOWN PLANNER & SURVEYOR INVEIW</span>
+                </div>
+                <div class="col-md-3 text-center teams-member">
+                    <img src="images/imageholder.jpg" alt="">
+                    <h6 class="mt-2 fw-bold">OLAWOYE RAHEEMAT</h6>
+                    <span>COO</span>
+                </div>
+                <div class="col-md-3 text-center teams-member">
+                    <img src="images/imageholder.jpg" alt="">
+                    <h6 class="mt-2 fw-bold">BAMIDELE ADULOJU</h6>
+                    <span>PROPERTY CONSULTANT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our client section -->
+    <div class="container py-5">
+        <div class="row featurette">
+
+            <div class="col-md-7 order-md-2 my-auto">
+                <div class="mb-3">
+                    <div class="d-flex align-items-center mx-2">
+                        <img src="svg/Image.svg" class="me-2" alt="">
+                        <h5 class="mb-0">Our Client</h5>
+                    </div>
+                </div>
+                <h3 class="featurette-heading fw-normal lh-1">What Our satisfied clients</h3>
+                <h3 class="text-body-secondary">are saying.</h3>
+
+                <!-- testimonial  -->
+                <div class="testimonial-container">
+                    <div id="testimonialCarousel" class="testimonial-slide" data-bs-ride="carousel">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-item active">
+                                <div class="testimonial-caption">
+                                    <p class="lead">"This company exceeded our expectations with their exceptional
+                                        service!"</p>
+                                    <p><strong>– Idris Abiodun</strong></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-caption">
+                                    <p class="lead">"A fantastic experience, highly recommend their professional team."
+                                    </p>
+                                    <p><strong>– Clement Eyitayo</strong></p>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-caption">
+                                    <p class="lead">"Their attention to detail made all the difference for our project."
+                                    </p>
+                                    <p><strong>Abiodun Joy</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Previous button -->
+                        <button class="testimonial-prev custom-prev-btn" type="button"
+                            data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous">
+                            <svg width="80" height="69" viewBox="0 0 80 69" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12" y="12.4099" width="56" height="56" rx="10" fill="#9CFF01" />
+                                <path
+                                    d="M48.2113 39.2544C48.4234 39.4665 48.4901 39.6827 48.4822 39.9735C48.4663 40.555 48.0182 41.0031 47.4367 41.0189L32.8978 41.4156C32.3163 41.4315 31.892 41.0072 31.9079 40.4256C31.9238 39.8441 32.3718 39.396 32.9534 39.3802L47.4922 38.9835C47.783 38.9756 47.9991 39.0423 48.2113 39.2544Z"
+                                    fill="white" />
+                                <path
+                                    d="M40.3932 32.9299C40.8175 33.3542 40.8016 33.9358 40.3536 34.3838L34.3793 40.358L40.0362 46.0149C40.4605 46.4392 40.4446 47.0207 39.9965 47.4688C39.5485 47.9169 38.9669 47.9327 38.5426 47.5085L32.1787 41.1445C31.7544 40.7202 31.7703 40.1387 32.2183 39.6906L38.9394 32.9696C39.3874 32.5216 39.969 32.5056 40.3932 32.9299Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+
+                        <!-- Next button -->
+                        <button class="testimonial-next custom-next-btn" type="button"
+                            data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next">
+                            <svg width="68" height="69" viewBox="0 0 68 69" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12" y="12.4099" width="56" height="56" rx="10" fill="#9CFF01" />
+                                <g clip-path="url(#clip0_1_1526)">
+                                    <path
+                                        d="M31.7887 41.5554C31.5766 41.3433 31.5099 41.1271 31.5178 40.8364C31.5337 40.2548 31.9818 39.8067 32.5633 39.7909L47.1022 39.3942C47.6837 39.3783 48.108 39.8026 48.0921 40.3842C48.0762 40.9657 47.6282 41.4138 47.0466 41.4297L32.5078 41.8263C32.217 41.8342 32.0009 41.7676 31.7887 41.5554Z"
+                                        fill="white" />
+                                    <path
+                                        d="M39.6068 47.8799C39.1825 47.4556 39.1984 46.874 39.6464 46.426L45.6207 40.4518L39.9638 34.7949C39.5395 34.3706 39.5554 33.7891 40.0035 33.341C40.4515 32.8929 41.0331 32.8771 41.4574 33.3013L47.8213 39.6653C48.2456 40.0896 48.2297 40.6711 47.7817 41.1192L41.0606 47.8402C40.6126 48.2883 40.031 48.3042 39.6068 47.8799Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1526">
+                                        <rect width="24" height="26" fill="white"
+                                            transform="translate(40.707 22.7302) rotate(45)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="col-md-5 order-md-1 d-none d-sm-block">
+                <div class="client-image-placeholder w-100 h-100"></div>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="row text-white g-3 mb-2 mt-3 partners">
+            <img src="xone.svg" alt="" class="me-2">
+            <img src="promasidor.svg" alt="" class="me-2">
+            <img src="car45.svg" alt="" class="me-2">
+            <img src="jumia.svg" alt="" class="me-2">
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <div class="container-fluid footer-container" id="footer">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 px-5 border-top text-white">
+            <div class="col mb-3"> <a href="/"
+                    class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+                    aria-label="Bootstrap"> <img src="images/kitablogo.png" alt=""> </a>
+                <p class="text-white fw-normal">Quality Services Delivery and Customer Satisfaction</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="me-2" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2" title="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="me-2" title="Instagram"><i class="bi bi-instagram"></i></a>
+
+
+
+                </div>
+                <p class="text-white small mt-5 small">Copyright © 2025 All Rights Reserved.</p>
+            </div>
+            <div class="col mb-3"></div>
+            <div class="col mb-3">
+                <h5>Quick Link</h5>
+                <ul class="nav flex-column small">
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="index.html">Home</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#about-us">About Us</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#our-service">Services</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#media">Media & Advertising</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#land">Land Merchandise</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#team">Our Team</a></li>
+                    
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h5>Security</h5>
+                <ul class="nav flex-column small">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Terms & Condition</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Privacy Policy</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Help</a></li>
+                    <li class="nav-item mb-2"><a class="nav-link p-0 text-white" href="#footer">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col mb-3">
+                <h5>Contact</h5>
+                <ul class="nav flex-column small">
+                    <li class="nav-item mb-2"><a href="tel:09060064364" class="nav-link p-0 text-white">09060064364</a></li>
+                    <li class="nav-item mb-2"><a href="mailto:info@kitabservices.com" class="nav-link p-0 text-white">info@kitabservices.com</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">www.kitabservices.com</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"> 1 Ogunnusi Rd Opp Excellent hotel Ogba Lagos</a></li>
+                    
+    
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+    
+
+
+   </div>
+<div class="floating-button-group">
+  <!-- Arrow Up Button -->
+  <button id="scrollToTopBtn" aria-label="Scroll to top" class="scroll-top-btn">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp Button -->
+  <button id="whatsapp-btn">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+  </button>
+</div>
+
+<!-- Optional WhatsApp Chat Box (popup) -->
+<div id="chat-box" class="chat-box" style="display: none;">
+  <p>👋 Hi! How can we help you?</p>
+  <a href="https://wa.me/2349060064364" target="_blank">Start Chat on WhatsApp</a>
+</div>
 
 
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+    <script src="scripts/testimonial.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/ads.js"></script>
+
+
+    <script>
+        const scrollBtn = document.getElementById('scrollToTopBtn');
+
+        // Show button when scrolled down
+        window.onscroll = () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        };
+
+        // Scroll to top on click
+        scrollBtn.onclick = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+    </script>
 </body>
 
 </html>
