@@ -13,6 +13,11 @@ header {
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.navbar-brand img {
+  max-height: 60px; /* default size for large screens */
+  height: auto;
+  width: auto;
+}
 
 .nav-link.active,
 .nav-link[aria-current="page"] {
@@ -24,10 +29,7 @@ header {
   color: darkgreen !important;
 }
 
-.navbar-toggler {
-  border: 2px solid #9cff01 !important;
-  border-radius: 4px;
-}
+
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239cff01' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -49,6 +51,27 @@ header {
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;               /* Large size for emphasis */
+  font-weight: 800;              /* Bold weight */
+  line-height: 1.2;              /* Tighter line spacing */
+  color: #ffffff;                /* Ensure white text */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Shadow for contrast on any background */
+  letter-spacing: 1px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .carousel-item {
@@ -96,7 +119,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  height: 100vh;
+  min-height: 90vh;
   overflow: hidden;
 }
 
@@ -137,15 +160,16 @@ header {
 }
 
 .services {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url("../images/carouselbg.png");
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url("../images/carouselbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 50vh;
   z-index: 1;
   /* ✅ Allows it to grow beyond 50vh if needed */
-  padding: 3rem 0.5rem;
+  padding: 0rem 0.5rem;
   /* ✅ Prevents content from sticking to the edges */
   color: #ebebeb;
 }
@@ -240,8 +264,12 @@ footer::before {
 
 /* Responsive Fixes */
 @media (max-width: 992px) {
+     .carousel-item {
+    min-height: 30vh; 
+  }
+
   .about {
-    height: auto;
+    min-height: 50vh;
     padding: 2rem 0;
   }
 
@@ -298,3 +326,132 @@ footer::before {
     border: none;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 40px; /* smaller size for mobile */
+  }
+    .footer-logo {
+    max-height: 40px; /* smaller size for mobile */
+  }
+   .carousel-item {
+    min-height: 40vh; 
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-item {
+    min-height: 35vh; /* Large tablets or small desktops */
+  }
+    #about-us {
+    min-height: 35vh;
+    padding: 2rem 0;
+  }
+  .img-stack {
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abt-img-1,
+  .abt-img-2 {
+    position: absolute;
+    width: 180px; /* Smaller size */
+    border-radius: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .abt-img-1 {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .abt-img-2 {
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+.portrait-gallery img {
+  width: 162px;        /* 50% of your original 270px */
+  max-width: 100%;
+  border-radius: 8px;
+}
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .carousel-item {
+    min-height: 30vh; /* iPads */
+  }
+   .about {
+    min-height: 30vh;
+    padding: 2rem 0;
+  }
+   #about-us {
+    min-height: 30vh;
+    padding: 2rem 0;
+  }
+  .img-stack {
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abt-img-1,
+  .abt-img-2 {
+    position: absolute;
+    width: 180px; /* Smaller size */
+    border-radius: 1rem;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .abt-img-1 {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .abt-img-2 {
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .services {
+    min-height: 25vh;
+    /* padding: 0rem 0.5rem; */
+    
+  }
+
+
+.portrait-gallery img {
+  width: 189px;        /* 50% of your original 270px */
+  max-width: 100%;
+  border-radius: 8px;
+}
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+}
+  
+
+
+
+
+
+
+
