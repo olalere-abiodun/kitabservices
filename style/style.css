@@ -9,15 +9,30 @@ body {
   margin: 0;
   padding: 0;
 }
-header {
+
+a {
+  text-decoration: none;
+  color: #8fd400;
+  font-size: 16px;
+  font-weight: bold;
+}
+.index-header {
   padding: 25px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.other-header {
+  padding: 25px !important;
 }
 .navbar-brand img {
   max-height: 60px; /* default size for large screens */
   height: auto;
   width: auto;
 }
+    .footer-logo {
+    max-height: 60px; /* smaller size for mobile */
+    height: auto;
+    width: auto;
+  }
 
 .nav-link.active,
 .nav-link[aria-current="page"] {
@@ -29,7 +44,10 @@ header {
   color: darkgreen !important;
 }
 
-
+.message {
+  border: 2px solid #9cff01;
+  color: #000000;
+}
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239cff01' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -46,7 +64,7 @@ header {
   color: #ffffff;
 }
 
-.header a {
+.header a, .navbar a {
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
@@ -173,6 +191,21 @@ header {
   /* ✅ Prevents content from sticking to the edges */
   color: #ebebeb;
 }
+.services2 {
+ background-image: 
+  linear-gradient(to right, rgba(0, 0, 0, 2) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.2) 100%),
+  url("../images/carouselbg.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 35vh;
+  z-index: 1;
+  /* ✅ Allows it to grow beyond 50vh if needed */
+  padding: 0rem 0.5rem;
+  /* ✅ Prevents content from sticking to the edges */
+  color: #ebebeb;
+}
 
 .teams-wrapper {
   display: flex;
@@ -252,6 +285,13 @@ footer {
   background-position: center;
   z-index: 1;
 }
+.footer-container .nav-link {
+  color: #ccc !important; /* light gray */
+}
+
+.footer-container .nav-link:hover {
+  color: #fff !important; /* white on hover */
+}
 
 
 
@@ -263,7 +303,7 @@ footer {
 
   .about {
     min-height: 50vh;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
   }
 
   .about2 {
@@ -425,6 +465,11 @@ footer {
   }
   .services {
     min-height: 25vh;
+    /* padding: 0rem 0.5rem; */
+    
+  }
+    .services2 {
+    min-height: 20vh;
     /* padding: 0rem 0.5rem; */
     
   }
