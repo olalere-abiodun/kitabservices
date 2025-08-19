@@ -214,16 +214,21 @@ a {
 }
 
 .teams-row {
-  max-width: 770px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allow multiple rows if more than 6 */
 }
 
 .teams-member {
+  flex: 0 0 16.66%;  /* 6 in a row */
+  max-width: 16.66%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  box-sizing: border-box;
 }
+
 
 .teams-member img {
   height: 197px;
@@ -233,7 +238,7 @@ a {
 }
 
 .teams-member span {
-  font-size: 16px;
+  font-size: 12px;
   color: #81848a;
 }
 
